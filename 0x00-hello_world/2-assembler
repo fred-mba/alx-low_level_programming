@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S -fverbose-asm -g -02:  $CFILE -o ${CFILE::-2}".s"
+gcc -c -s $CFILE -o ${CFILE::-2}".s"
