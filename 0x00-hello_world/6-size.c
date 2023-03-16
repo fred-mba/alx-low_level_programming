@@ -4,6 +4,7 @@
 *main - Gate pass to the code block
 *Return: Always at 0 (success)
 */
+
 int main(void)
 {
 	printf("Size of a char: %lu byte(s)\n", sizeof(char));
