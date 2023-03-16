@@ -2,7 +2,11 @@
 #include <string.h>
 
 /**
-*puts -entry point
+*main - Entry point
+*
+*Description: 'the code block function holder'
+*
+*puts - write a line or string to the output string
 *Return: Always 0 (Success)
 */
 int main(void)
