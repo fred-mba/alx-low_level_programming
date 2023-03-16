@@ -5,7 +5,6 @@
 */
 int main(void)
 {
-	/*The size of each variable is computed by sizeof function*/
 	printf("Size of a char: %i byte(s)\n", sizeof(char));
 	printf("Size of an int: %i byte(s)\n", sizeof(int));
 	printf("Size of a long int: %i byte(s)\n", sizeof(int long));
