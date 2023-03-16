@@ -6,8 +6,8 @@
 */
 int main(void)
 {
-	char text2[] = ("with proper grammar, but the outcome is a piece of art,");
+	char text_2[] = "with proper grammar, but the outcome is a piece of art,";
 
-	printf("s\n", text2[]);
+	printf("s\n", text_2);
 	return (0);
 }
