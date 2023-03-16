@@ -5,19 +5,11 @@
 */
 int main(void)
 {
-	/*Declaring variables*/
-	char z;
-	int y;
-	long int x;
-	long long int w;
-	float v;
+printf("Size of a char: %lu byte(s)\n", sizeof(char));
+printf("Size of an int: %lu byte(s)\n", sizeof(int));
+printf("Size of a long int: %lu byte(s)\n", sizeof(long int));
+printf("Size of a long long int: %lu byte(s)\n", sizeof(long long int));
+printf("Size of a float: %lu bytes(s)\n", sizeof(float));
 
-	/*Byte sizes are evaluated by the sizeof function*/
-	printf("Size of a char: %lu byte(s)\n", sizeof(z));
-	printf("Size of an int: %lu byte(s)\n", sizeof(y));
-	printf("Size of a long int: %lu byte(s)\n", sizeof(x));
-	printf("Size of a long long int: %lu byte(s)\n", sizeof(w));
-	printf("Size of a float: %lu bytes(s)\n", sizeof(v));
-
-	return (0);
+return (0);
 }
