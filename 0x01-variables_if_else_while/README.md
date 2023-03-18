@@ -49,6 +49,11 @@
 
 ### 9-print_comb.c:
 
+- the program prints all possible single-unit combinations, separated by a comma.
+- use (',') or ASCII(44) to separate the output
+- use ( ) or ASCII(32) to insert space after digit.
+* Note: this applies best in putchar function where printf is restricted for use. 
+
 ### 100-print_comb3.c:
 
 ### 101-print_comb4.c:
