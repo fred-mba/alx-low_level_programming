@@ -43,7 +43,8 @@
 
 ### 8-print_base16.c:
 
-- base 10 numbers counts from 10 to 15.
+- base 10 numbers counts from 10 to 15. For this case, we've concatenated the alphabets a-f 
+  to produce alphanumeric base 16 results.
 
 ### 9-print_comb.c:
 
