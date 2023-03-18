@@ -5,7 +5,7 @@
 
 - <time.h> imports the function (time) which holds digits it miliseconds.
 - <stdio.h> imports putchar function.
-- <stdlib> declares function for character conversion and storage allocation. 
+- <stdlib.h> declares function for character conversion and storage allocation. 
 - srand function seeds milliseconds generated  by rand() function.
 - RAND_MAX: environment variable for random function.
 
@@ -30,13 +30,20 @@
 
 ### 5-print_numbers.c:
 
+- base 10 numbers counts from 0 to 10.
+- using printf, a format specifier %i used in printing formated output for integers.
+
 ### 6-print_numberz.c:
+
+- we need to format the argument in function putchar since it is used in printing characters.
 
 ### 7-print_tebahpla.c:
 
 - for the assigned variable, print the lowercase alphabets from z-a; in the reversed order.
 
 ### 8-print_base16.c:
+
+- base 10 numbers counts from 10 to 15.
 
 ### 9-print_comb.c:
 
