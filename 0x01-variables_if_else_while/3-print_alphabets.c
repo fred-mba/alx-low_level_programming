@@ -14,19 +14,17 @@ int main(void)
 	char m = 'a';
 
 	/*loop from assigned lowercase 'a' to 'z'*/
-	while (m <= 'z')
+	for (m = 'a'; m <= 'z'; ++m)
 	{
 		putchar(m);
-		m++;
 	}
 
 	m = 'A';
 
 	/*loop from assigned uppercase A to Z*/
-	while (m <= 'Z')
+	for (m = 'A'; m <= 'Z'; ++m)
 	{
 		putchar(m);
-		m++;
 	}
 
 	putchar('\n');
