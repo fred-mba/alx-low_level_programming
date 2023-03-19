@@ -5,11 +5,10 @@
 *main - Get pass to the block code
 *
 *Description - 'prints all possible combination of \
-*		digits'
+*		3 digits in ascending order'
 *
 *numbers must be separated by comma
-*print only smallest combination of numbers
-*use putchar function only (5times)
+*use putchar function only (6times)
 *Not allowed to use variable type char
 *Return: finish print 0 (success)
 */
