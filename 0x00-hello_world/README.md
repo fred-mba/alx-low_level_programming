@@ -12,3 +12,7 @@
 5-printf.c:
 
 6-size.c:
+
+###100-intel:
+
+- -masm=intel is the correct option to write the syntax inside the $CFILE.
