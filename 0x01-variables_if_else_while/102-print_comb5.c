@@ -24,7 +24,7 @@ int main(void)
 		{
 			for (y = '0'; y <= '9'; y++)
 			{
-				for (z = '0'; z <= '9'; z++)
+				for (z = '1'; z <= '9'; z++)
 				{
 					putchar(w);
 					putchar(x);
