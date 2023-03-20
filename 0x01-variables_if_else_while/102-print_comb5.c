@@ -8,20 +8,21 @@
 
 int main(void)
 {
-	int i, j;
+	int w;
+	int x;
 
-	for (i = 0; i <= 99; i++)
+	for (w = 0; w <= 99; w++)
 	{
-		for (j = 0; j <= 99; j++)
+		for (x = 0; x <= 99; x++)
 		{
-			if (i < j && i != j)
+			if (w < x && w != x)
 			{
-				putchar((i / 10) + '0');
-				putchar((i % 10) + '0');
+				putchar((w / 10) + '0');
+				putchar((w % 10) + '0');
 				putchar(' ');
-				putchar((j / 10) + '0');
-				putchar((j % 10) + '0');
-				if (i != 98 || j != 99)
+				putchar((x / 10) + '0');
+				putchar((x % 10) + '0');
+				if (w != 98 || x != 99)
 				{
 					putchar(',');
 					putchar(' ');
@@ -29,6 +30,7 @@ int main(void)
 			}
 		}
 	}
+
 	putchar('\n');
 	return (0);
 }
