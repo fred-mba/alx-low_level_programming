@@ -56,6 +56,17 @@
 
 ### 100-print_comb3.c:
 
+- Program prints all possible combination of two digits separated by a comma (,)
+
 ### 101-print_comb4.c:
+-Program prints all possible combination of three digits separated by a comma (,)
 
 ### 102-print_comb5.c:
+
+- A journey of worthy trials
+- The program prints out possible combinations of two two-digit numbers.
+- Inserting putchar(' ') between the variable callings, inserts a space between the digits.
+- We need to forcefully convert int to char, since putchar prints char by default
+- Splitting the numbers into four parts: int w, x, y, z gave out the same output, but it
+  was not authentic enough and consumed more bytes.
+
