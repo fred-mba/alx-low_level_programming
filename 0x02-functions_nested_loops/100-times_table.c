@@ -21,8 +21,12 @@ void print_times_table(int n)
 	{
 		for (multiplier = 0; multiplier <= n; multiplier++)
 		{
-			printf("%3d, ", column * multiplier);
-
+			result = column * multiplier;
+			printf("%2d", result);
+			if (multiplier != n)
+			{
+				printf(", ");
+			}
 		}
 		printf("\n");
 	}
