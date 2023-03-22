@@ -24,7 +24,7 @@ void print_to_98(int n)
 			else
 			/*incase the input number is less than 98, increase the order*/
 			{
-				printf("%d, ", i);
+				printf("%d, ", n);
 			}
 		}
 	}
