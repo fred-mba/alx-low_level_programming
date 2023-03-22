@@ -1,4 +1,4 @@
-#iclude "main.h"
+#include "main.h"
 /**
 *times_table - prints times table starting with 0
 *
