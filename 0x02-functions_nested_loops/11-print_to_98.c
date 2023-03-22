@@ -31,7 +31,7 @@ void print_to_98(int n)
 	/*Satisfy the condition if the number is greater than 98*/
 	else
 	{
-		for (int i = n; i >= 98; --i)
+		for (i = n; i >= 98; --i)
 		{
 			if (i == 98)
 			{
