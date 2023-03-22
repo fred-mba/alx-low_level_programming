@@ -3,7 +3,7 @@
 
 /**
 *print_to_98 - prints all natural numbers from n to 98 followed by a new line.
-*@n: starting point
+*@n: starting point. It is the general value for numbers below and above 98
 *
 */
 
