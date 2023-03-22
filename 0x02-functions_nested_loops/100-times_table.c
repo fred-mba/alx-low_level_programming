@@ -23,7 +23,7 @@ void print_times_table(int n)
 		{
 			if (multiplier == 0)
 			{
-				printf("%d", column * multiplier);
+				printf("%d, ", column * multiplier);
 			}
 			else
 			{
