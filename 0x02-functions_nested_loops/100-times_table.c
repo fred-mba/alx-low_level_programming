@@ -19,14 +19,12 @@ void print_times_table(int n)
 	/*prints the times table*/
 	for (column = 0; column <= n; column++)
 	{
+		printf("%2d", column);
+
 		for (multiplier = 0; multiplier <= n; multiplier++)
 		{
 			result = column * multiplier;
-			printf("%3d", result);
-			if (multiplier != n)
-			{
-				printf(", ");
-			}
+			printf(", %2d", result);
 		}
 		printf("\n");
 	}
