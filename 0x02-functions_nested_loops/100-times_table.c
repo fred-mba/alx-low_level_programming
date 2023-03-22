@@ -22,7 +22,7 @@ void print_times_table(int n)
 		for (multiplier = 0; multiplier <= n; multiplier++)
 		{
 			result = column * multiplier;
-			printf("%2d", result);
+			printf("%3d", result);
 			if (multiplier != n)
 			{
 				printf(", ");
