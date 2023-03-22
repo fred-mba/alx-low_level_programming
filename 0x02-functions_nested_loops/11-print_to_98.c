@@ -15,7 +15,7 @@ void print_to_98(int n)
 	{
 		/*letter i for my case means input number*/
 		/*n is the original assigned number*/
-		for (int i = n; i <= 98; ++i)
+		for (i = n; i <= 98; ++i)
 		{
 			if (i == 98)
 			{
