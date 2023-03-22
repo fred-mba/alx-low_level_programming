@@ -19,12 +19,12 @@ void print_to_98(int n)
 		{
 			if (i == 98)
 			{
-				printf("%d\n", n);
+				printf("%d\n", i);
 			}
 			else
 			/*incase the input number is less than 98, increase the order*/
 			{
-				printf("%d, ", n);
+				printf("%d, ", i);
 			}
 		}
 	}
