@@ -20,7 +20,6 @@ void print_times_table(int n)
 	for (column = 0; column <= n; column++)
 	{
 		printf("%2d", column);
-
 		for (multiplier = 0; multiplier <= n; multiplier++)
 		{
 			result = column * multiplier;
