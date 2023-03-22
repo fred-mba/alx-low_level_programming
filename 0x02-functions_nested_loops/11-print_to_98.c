@@ -9,6 +9,8 @@
 
 void print_to_98(int n)
 {
+	int i;
+
 	if (n <= 98)
 	{
 		/*letter i for my case means input number*/
@@ -37,7 +39,7 @@ void print_to_98(int n)
 			}
 			else
 			{
-				printf("%d\n", i);
+				printf("%d, ", i);
 			}
 		}
 	}
