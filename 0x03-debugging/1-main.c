@@ -2,6 +2,7 @@
 
 /**
 * main - causes an infinite loop
+*Description: loops until the condition is met
 * Return: 0
 */
 
@@ -13,8 +14,7 @@ int main(void)
 
 	i = 0;
 
-	/*output to infinite loop*/
-	while (i < 10)
+	while (i < 10) /*output to infinite loop*/
 	{
 		putchar(i);
 	}
