@@ -2,7 +2,6 @@
 
 /**
 * main - causes an infinite loop
-*Description: loops until the condition is met
 * Return: 0
 */
 
@@ -14,10 +13,12 @@ int main(void)
 
 	i = 0;
 
-	while (i < 10) /*output to infinite loop*/
+	/*Causes the infinite loop
+	while (i < 10)
 	{
 		putchar(i);
 	}
+	*/
 
 	printf("Infinite loop avoided! \\o/\n");
 
