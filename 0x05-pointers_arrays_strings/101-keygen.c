@@ -14,7 +14,7 @@ int main(void)
 
 	srand(time(NULL));
 
-	for (t = 0, max_range = 2772; max_range > 122; t++)
+	for (t = 0, max_range = 2800; max_range > 122; t++)
 	{
 		rand_num = ((rand() % 125) + 1);
 
