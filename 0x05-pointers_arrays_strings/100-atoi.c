@@ -22,14 +22,17 @@ int _atoi(char *s)
 	{
 		if (*s == '-')
 			sign = -sign;
+
 		else if (*s == '+')
 			; /* ignore + sign */
+
 		else if (*s >= '0' && *s <= '9')
 		{
 			num = 1;
-			result = result * 10 + (*s - '0');
+			result *= 10 + (*s - '0');
 		}
 		else if (num)
+
 			break; /* end of number */
 		s++;
 	}
