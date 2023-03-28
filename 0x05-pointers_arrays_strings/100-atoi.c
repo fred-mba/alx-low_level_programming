@@ -3,40 +3,43 @@
 /**
  * _atoi - Convert a string to integer.
  * @s: char array string
- * Description: Number in the string can be preceded by an infinite
+ * Description: Numbers in the string can be preceded by an infinite
  * number of characters.
  * You need to take into account all -/+ signs before the number.
  * If there are no numbers in the string, return 0.
  * No need to check for overflow.
  * Not allowed to hard-code special values.
- * Return: first integer found in string
+ * Return: first integer found in string, either -/+
  */
 
 int _atoi(char *s)
 {
-	int i;
-	int h, p;
+	int i = 0;
+	int sign = 1;
+	int output = 0;
 
-	h = 0;
-	p = -1;
-	for (i = 0; s[i] != '\0'; i++)
+	/*Handles the white spaces*/
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n')
 	{
-		if (s[i] == '-')
-			p *= -1;
-
-		if (s[i] > 47 && s[i] < 58)
-		{
-			if (h < 0)
-				h = (h * 10) - (s[i] - '0');
-			else
-				h = (s[i] - '0') * -1;
-
-			if (s[i + 1] < 48 || s[i + 1] > 57)
-				break;
-		}
+		++i;
 	}
-	if (p < 0)
-		h *= -1;
 
-	return (h);
+	/*Handle sign*/
+	if (s[i] == '-')
+	{
+		sign = -1;
+		++i;
+	}
+	else if (s[i] == '+')
+	{
+		++i;
+	}
+
+	/*processing the result*/
+	while (s[i] >= '0' && s[i] <= '9')
+	{
+		output = output * 10 + (s[i] - '0');
+		++i;
+	}
+	return (sign * output);
 }
