@@ -33,6 +33,6 @@ int _atoi(char *s)
 		}
 		++i;
 	}
-	result *= sign;
-	return (result);
+	output *= sign;
+	return (output);
 }
