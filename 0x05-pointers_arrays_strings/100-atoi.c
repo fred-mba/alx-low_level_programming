@@ -14,25 +14,23 @@
 
 int _atoi(char *s)
 {
-	int i = 0;
-	int sign = 0;
-	int output = 0;
+	int sign = 1, result = 0, num = 0;
 
-	/*Handles the white spaces*/
-	while (s[i] == '\0')
+	while (*s)
 	{
-		if (s[i] == '-') /*Handle -ve sign*/
-
-			sign *= -1;
-
-
-		if (s[i] >= '0' && s[i] <= '9')
+		if (*s == '-')
+			sign = -sign;
+		else if (*s == '+')
+			; /* ignore + sign */
+		else if (*s >= '0' && *s <= '9')
 		{
-			output *= 10;		/*generating the result*/
-			output -= (s[i] - '0');
+			num = 1;
+			result = result * 10 + (*s - '0');
 		}
-		++i;
+		else if (seen_digit)
+			break; /* end of number */
+		s++;
 	}
-	output *= sign;
-	return (output);
+
+	return (result * sign);
 }
