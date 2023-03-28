@@ -27,7 +27,7 @@ int _atoi(char *s)
 			num = 1;
 			result = result * 10 + (*s - '0');
 		}
-		else if (seen_digit)
+		else if (num)
 			break; /* end of number */
 		s++;
 	}
