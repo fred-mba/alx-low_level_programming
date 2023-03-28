@@ -14,7 +14,9 @@
 
 int _atoi(char *s)
 {
-	int i = sign = output = 0;
+	int i = 0;
+	int sign = 0;
+	int output = 0;
 
 	/*Handles the white spaces*/
 	while (s[i] == '\0')
