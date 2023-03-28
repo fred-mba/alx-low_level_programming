@@ -14,7 +14,7 @@ int main(void)
 
 	srand(time(NULL));
 
-	for (t = 0; t <= 2250; t++)
+	for (t = 0; t <= 3000; t++)
 	{
 		rand_num = rand();
 		gen_var = ((rand_num % 125) + 1);
