@@ -22,7 +22,7 @@ int main(void)
 
 		max_range -= rand_num;
 	}
-	printf("\n");
+	printf("%c", max_range);
 
 	return (0);
 }
