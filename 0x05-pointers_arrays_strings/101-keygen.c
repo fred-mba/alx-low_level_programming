@@ -10,16 +10,17 @@
 
 int main(void)
 {
-	int t, rand_num, gen_var;
+	int t, rand_num, gen_pasw;
 
 	srand(time(NULL));
 
 	for (t = 0; t <= 2250; t++)
 	{
-		rand_num = rand();
-		gen_var = ((rand_num % 125) + 1);
+		rand_num = ((rand() % 125) + 1);
 
-		printf("%c", gen_var);
+		printf("%c", rand_num);
+
+		gen_pasw -= rand_num;
 	}
 	printf("\n");
 
