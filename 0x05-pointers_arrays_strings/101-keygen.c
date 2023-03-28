@@ -12,9 +12,11 @@ int main(void)
 {
 	int t, rand_num, max_range;
 
+	max_range = 2772;
+
 	srand(time(NULL));
 
-	for (t = 0, max_range = 2800; max_range > 122; t++)
+	for (t = 0; max_range > 122; t++)
 	{
 		rand_num = ((rand() % 125) + 1);
 
