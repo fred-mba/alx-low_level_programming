@@ -29,7 +29,7 @@ int _atoi(char *s)
 		else if (*s >= '0' && *s <= '9')
 		{
 			num = 1;
-			result *= 10 + (*s - '0');
+			result = result * 10 + (*s - '0');
 		}
 		else if (num)
 
