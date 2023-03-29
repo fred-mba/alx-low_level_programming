@@ -15,15 +15,16 @@ char *_strcat(char *dest, char *src)
 {
 	int i, j;
 
+	/*move to the end of the destination string*/
+	/*i pointing to the terminating null character in dest*/
 	for (i = 0; dest[i] != '\0'; i++)
 
 		;
 	for (j = 0; src[j] != '\0'; j++)
 	{
 		dest[i] = src[j];
-		i++;
+		++i;
 	}
-
-	dest[i] = ('\0');
+	dest[i] = ('\0'); /*terminate destination string*/
 	return (dest);
 }
