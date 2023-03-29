@@ -14,6 +14,11 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	char *ptr;
 
+	if (dest == 0)
+	{
+		return (0);
+	}
+
 	ptr = dest; /*pointing beginning of destination buffer*/
 	while (src && n--) /*copy characters in src into array pointed by dest*/
 	{
