@@ -10,17 +10,21 @@
 
 char *rot13(char *s)
 {
-	int i;
+	int i, j;
 
 	char holder1[] = "nopqrstuvwxyzabcdefghijklm";
 	char holder2[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
+	char var = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if ((s[i] > 64 && s[i] < 91) || (s[i] > 96 && s[i] < 123))
+		for (j = 0; holder2[j] != '\0' && var == 0; j++)
 		{
-			s[i] = (s[i] - 65 > 25) ?
-				holder1[s[i] - 97] : holder2[s[i] - 65];
+			if (s[i] == holder2[j])
+			{
+				s[i] = holder1[j];
+				var = 1;
+			}
 		}
 	}
 	return (s);
