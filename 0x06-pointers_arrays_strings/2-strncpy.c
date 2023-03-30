@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *_strncpy - copies string to destination
+ *_strncpy - copies specified number of characters to destination
  *Description: if the dest array is empty, return NULL
  *		else, start from the beginning of dest
  *@src: string source
@@ -12,20 +12,18 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *ptr;
+	int i = 0;
 
-	if (dest == 0)
+	while (i < n && src[i] != ('\0'))
 	{
-		return (0);
+		dest[i] = src[i];
+		++i;
 	}
-
-	ptr = dest; /*pointing beginning of destination buffer*/
-	while (src && n--) /*copy characters in src into array pointed by dest*/
+	/*continue iterating over the dest until n char have been copied*/
+	while (i < n)
 	{
-		*dest = *src;
-		dest++;
-		src++;
+		dest[i] = ('\0');
+		++i;
 	}
-	dest = ('\0'); /*when encounter null in src, terminate*/
-	return (ptr);
+	return (dest);
 }
