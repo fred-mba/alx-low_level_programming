@@ -9,31 +9,18 @@
 char *cap_string(char *str)
 {
 	int i, j;
-	int change;
-	char sepa[] = ",;.!?(){}\n\t\" ";
+	char mark[] = ",;.!?(){}\n\t\" ";
 
-	for (i = 0, change = 0; str[i] != '\0'; i++)
+	i = 1;
+
+	if (str[0] >= 'a' && str[0] <= 'z')
+		str[0] -= ('a' - 'A');
+	while (str[i] != '\0')
 	{
-		if (str[0] > 96 && str[0] < 123)
-			change = 1;
-		for (j = 0; sepa[j] != '\0'; j++)
-		{
-			if (sepa[j] == str[i])
-				change = 1;
-		}
-
-		if (change)
-		{
-			if (str[i] > 96 && str[i] < 123)
-			{
-				str[i] -= 32;
-				change = 0;
-			}
-			else if (str[i] > 64 && str[i] < 91)
-				change = 0;
-			else if (str[i] > 47 && str[i] < 58)
-				change = 0;
-		}
+		for (j = 0; mark[j] != '\0'; j++)
+			if (str[i - 1] == mark[j] && (str[i] >= 'a' && str[i] <= 'z'))
+				str[i] -= ('a' - 'A');
+		i++;
 	}
 	return (str);
 }
