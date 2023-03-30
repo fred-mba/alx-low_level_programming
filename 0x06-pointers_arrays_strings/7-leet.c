@@ -15,10 +15,12 @@ char *leet(char *s)
 
 	char letr[] = "aAeEoOtTlL";
 	char num[] = "43071";
+	char value;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; letr[j] != '\0'; j++)
+		value = 0;
+		for (j = 0; letr[j] != '\0' && value == 0; j++)
 			if (s[i] == letr[j])
 				s[i] = num[j / 2];
 	}
