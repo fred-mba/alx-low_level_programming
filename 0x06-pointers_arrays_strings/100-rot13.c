@@ -12,12 +12,13 @@ char *rot13(char *s)
 {
 	int i, j;
 
-	char holder1[] = "nopqrstuvwxyzabcdefghijklm";
-	char holder2[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
-	char var = 0;
+	char holder1[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char holder2[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char var;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
+		var = 0;
 		for (j = 0; holder2[j] != '\0' && var == 0; j++)
 		{
 			if (s[i] == holder2[j])
