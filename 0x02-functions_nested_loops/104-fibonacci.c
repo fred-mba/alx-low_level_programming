@@ -8,7 +8,7 @@ int main(void)
 {
 	int cnt;
 	unsigned long i, j, k;
-	unsigned m, n, p, fobni;
+	unsigned long m, n, p, fobni;
 
 	cnt = 0;
 	j = 1;
