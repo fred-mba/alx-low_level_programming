@@ -1,7 +1,11 @@
 #include <stdio.h>
 /**
- * main -  By considering the terms in the Fibonacci sequence
- *	whose values do not exceed 4,000,000.
+ * main - finds and prints the first 98 Fibonacci numbers.
+ *The numbers should be separated by comma, followed by a space
+ *Not allowed to use the standard library
+ *Not allowed to use long long, malloc, pointers,
+ *	arrays/tables, or structures
+ *Not allowed to hard code any Fibonacci number (except for 1 and 2)
  * Return: 0 (Success)
  */
 int main(void)
