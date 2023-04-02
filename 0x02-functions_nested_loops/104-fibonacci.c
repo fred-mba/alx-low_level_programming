@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main -  By considering the terms in the Fibonacci sequence
- *	whose values do not exceed 4,000,000. 
+ *	whose values do not exceed 4,000,000.
  * Return: 0 (Success)
  */
 int main(void)
