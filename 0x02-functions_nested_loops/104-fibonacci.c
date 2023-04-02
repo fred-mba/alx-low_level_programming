@@ -1,18 +1,19 @@
 #include <stdio.h>
 /**
-  * main - print the first 98 fibonacci numbers.
-  * Return: Nothing.
-  */
+ * main -  By considering the terms in the Fibonacci sequence
+ *	whose values do not exceed 4,000,000. 
+ * Return: 0 (Success)
+ */
 int main(void)
 {
-	int count;
+	int cnt;
 	unsigned long i, j, k;
-	unsigned long m, n, p, carry;
+	unsigned m, n, p, fobni;
 
-	count = 0;
-	i = 0;
+	cnt = 0;
 	j = 1;
-	for (count = 1; count <= 91; count++)
+	i = 0;
+	for (cnt = 1; cnt <= 91; cnt++)
 	{
 		k = i + j;
 		i = j;
@@ -23,11 +24,11 @@ int main(void)
 	i = i / 1000;
 	n = j % 1000;
 	j = j / 1000;
-	while (count <= 98)
+	while (cnt <= 98)
 	{
-		carry = (m + n) / 1000;
-		p = (m + n) - carry * 1000;
-		k = (i + j) + carry;
+		fobni = (m + n) / 1000;
+		p = (m + n) - fobni * 1000;
+		k = (i + j) + fobni;
 		m = n;
 		n = p;
 		i = j;
@@ -36,9 +37,9 @@ int main(void)
 			printf("%lu%lu", k, p);
 		else
 			printf("%lu0%lu", k, p);
-		if (count != 98)
+		if (cnt != 98)
 			printf(", ");
-		count++;
+		cnt++;
 	}
 	putchar('\n');
 	return (0);
