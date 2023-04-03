@@ -6,7 +6,7 @@
  *	of the character c in the string s, or NULL if the
  *	character is not found.
  *@s: string pointer
- *@c: character in search on a string
+ *@c: character search
  *Return: void
  */
 
