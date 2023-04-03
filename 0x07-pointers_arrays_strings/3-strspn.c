@@ -6,7 +6,7 @@
  *	is made up of characterscontained in pointed string str2.
  *@accept: str2 pointer
  *@s: str1 pointer
- *Return: 0 (success)
+ *Return: number of bytes
  */
 
 unsigned int _strspn(char *s, char *accept)
