@@ -4,30 +4,34 @@
  *_strspn - gets the length of a prefix substring
  *Description: returns the length of initial substring str1 that is
  *	is made up of characterscontained in pointed string str2.
- *@accept: string pointer
+ *@accept: str2 pointer
  *@s: str1 pointer
  *Return: 0 (success)
  */
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i;
+	int i = 0;
 	int j;
 	int num_byt = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (s[i] != '\0')
 	{
-		for (j = 0; s[j] != '\0'; j++)
+		j = 0;
+		while (accept[j] != '\0')
 		{
-			if (s[i] == accept[j])
+			if (accept[j] == s[i])
 			{
 				num_byt++;
 				break;
 			}
+			j++;
 		}
-		if (accept[j] == '\0') /*end of string*/
-
+		if (accept[j] == '\0') /*end of iteration*/
+		{
 			break;
+		}
+		++i;
 	}
-	return (num_byt - 2);
+	return (num_byt);
 }
