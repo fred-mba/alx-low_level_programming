@@ -12,4 +12,5 @@ int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
 int Mysqrt(int x, int y);
 int primechecker(int n, int i);
+int strtest(char *start, int len, int cnt);
 #endif
