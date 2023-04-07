@@ -1,11 +1,11 @@
 # C - Static libraries
 
 ### libmy.a
-- This is a static library elisting all object file in the current
+- This static library elists all object files in the working
   directory.
 
 ### create_static_lib.sh
-- This is a script that creates a static library called liball.a from
+- This script creates a static library called liball.a from
   all the .c files that are in the current directory.
-- The secrete in this file is to write the command to compile all th
+- The trick on this task was writing the command to compile all the
   .c files, then add them in the static library.
