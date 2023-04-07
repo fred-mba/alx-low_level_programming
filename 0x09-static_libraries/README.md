@@ -7,5 +7,5 @@
 ### create_static_lib.sh
 - This script creates a static library called liball.a from
   all the .c files that are in the current directory.
-- The trick on this task was writing the command to compile all the
+- The trick on this task was writing the command for compiling all the
   .c files, then add them in the static library.
