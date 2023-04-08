@@ -4,7 +4,7 @@
 /**
  *main - The program prints its name, followed by new line
  *@argc: argument count
- *@argv: argument array
+ *@argv: one-dimensional array of strings
  *Return: 0 success
  */
 
