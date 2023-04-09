@@ -15,26 +15,25 @@
 int main(int argc, char *argv[])
 {
 	int i, num, res = 0;
-	if (argc <= 1)
-	{
-		printf("0\n");
-		return (0);
-	}
-	for (i = 1; i < argc; ++i)
-	{
-		num = atoi(argv[i]);
+	char *arg;
 
-		if (num == 0 && *argv[i] != '0')
+	for (i = 1; i < argc; i++)
+	{
+		if (argv[i])
 		{
-			printf("Error\n");
-			return (1);
-		}
-		else
-		{	
-			res += num;
+			/*convert the initial part of the string to given base*/
+			num = strtol(argv[i], &arg, 10);
+			if (!*arg)
+
+				res += num;
+			else
+			{
+				printf("Error\n");
+				return (1);
+			}
+
 		}
 	}
 	printf("%d\n", res);
-
 	return (0);
 }
