@@ -14,9 +14,10 @@
 
 int main(int argc, char *argv[])
 {
-	int i, amount, change = 0;
+	unsigned int i; 
+	int amount, change = 0;
 
-	int cents[] = {25, 10, 5, 1};
+	int cents[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -24,7 +25,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	amount = atoi(argv[i]);
+	amount = atoi(argv[1]);
 
 	if (amount <= 0)
 	{
@@ -34,7 +35,7 @@ int main(int argc, char *argv[])
 	for (i = 0; i < sizeof(cents) / sizeof(i); i++)
 	{
 		change += amount / cents[i];
-		total %= cents[i];
+		amount %= cents[i];
 	}
 
 	printf("%d\n", change);
