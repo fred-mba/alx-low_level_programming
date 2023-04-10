@@ -14,7 +14,7 @@
 
 int main(int argc, char *argv[])
 {
-	unsigned int i; 
+	unsigned int i;
 	int amount, change = 0;
 
 	int cents[] = {25, 10, 5, 2, 1};
