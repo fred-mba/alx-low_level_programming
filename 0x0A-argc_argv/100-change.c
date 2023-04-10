@@ -14,10 +14,9 @@
 
 int main(int argc, char *argv[])
 {
-	unsigned int i;
-	int amount, change = 0;
-
+	int i = 0, amount, change = 0;
 	int cents[] = {25, 10, 5, 2, 1};
+	char *str;
 
 	if (argc != 2)
 	{
@@ -25,19 +24,26 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	amount = atoi(argv[1]);
+	amount = strtol(argv[1], &str, 10);
 
-	if (amount <= 0)
+	if (!*str)
+	{
+		while (i < 5)
+		{
+			while (amount >= cents[i])
+			{
+				change += amount / cents[i];
+				amount %= cents[i];
+			}
+			i++;
+		}
+	}
+	else
 	{
 		printf("Error\n");
 		return (1);
 	}
-	for (i = 0; i < sizeof(cents) / sizeof(i); i++)
-	{
-		change += amount / cents[i];
-		amount %= cents[i];
-	}
 
 	printf("%d\n", change);
-	return (1);
+	return (0);
 }
