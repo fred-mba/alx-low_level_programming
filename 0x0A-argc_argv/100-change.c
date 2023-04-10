@@ -14,7 +14,9 @@
 
 int main(int argc, char *argv[])
 {
-	int amt_cents, change = 0;
+	int i, amount, change = 0;
+
+	int cents[] = {25, 10, 5, 1};
 
 	if (argc != 2)
 	{
@@ -22,33 +24,19 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	amt_cents = atoi(argv[1]);
+	amount = atoi(argv[i]);
 
-	while (amt_cents >= 0)
+	if (amount <= 0)
 	{
-		change++;
-		if ((change - 25) >= 0)
-		{
-			change -= 25;
-			continue;
-		}
-		if ((change - 10) >= 0)
-		{
-			change -= 10;
-			continue;
-		}
-		if ((change - 5) >= 0)
-		{
-			change -= 5;
-			continue;
-		}
-		if ((change - 2) >= 0)
-		{
-			change -= 2;
-			continue;
-		}
-		amt_cents--;
+		printf("Error\n");
+		return (1);
 	}
+	for (i = 0; i < sizeof(cents) / sizeof(i); i++)
+	{
+		change += amount / cents[i];
+		total %= cents[i];
+	}
+
 	printf("%d\n", change);
-	return (0);
+	return (1);
 }
