@@ -24,7 +24,7 @@
 - If width or height is 0 or negative, return NULL
 
 ## 4-free_grid.c
-- Frees a 2 dimensional grid previously created by your alloc_grid function
+- Frees a 2 dimensional grid previously created by alloc_grid function
 
 ## 100-argstostr.c
 - Concatenates all the arguments of your program.
