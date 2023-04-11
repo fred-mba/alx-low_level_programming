@@ -22,6 +22,11 @@ char *_strdup(char *str)
 
 	str2 = malloc(len + 1);
 
+	if (str2 == NULL)
+	{
+		return (NULL);
+	}
+
 	if (str2 != NULL)
 	{
 		memcpy(str2, str, len + 1);
