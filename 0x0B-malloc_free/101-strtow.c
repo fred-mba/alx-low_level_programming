@@ -14,7 +14,7 @@ char **strtow(char *str)
 {
 	char **words;
 
-	words = malloc(str * sizeof(char *) + 1);
+	words = malloc(sizeof(char *) * (strlen(str) + 1));
 
 	if (words == NULL)
 	{
