@@ -44,7 +44,7 @@ int mul(int num1, int num2)
  *Return: 0 ==> success
  */
 
-int main(int argc, char *argv[])
+int _main(int argc, char *argv[])
 {
 	int *prod, res, i;
 
