@@ -8,4 +8,5 @@ int *array_range(int min, int max);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int mul(int num1, int num2); 
 int _isdigit(char *str);
+int _main(int argc, char *argv[]);
 #endif
