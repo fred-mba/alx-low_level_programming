@@ -12,12 +12,8 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-<<<<<<< HEAD
 	char *a;
-=======
-	int *a;
 	unsigned int i;
->>>>>>> 327862738d19bc7000c368b99cce6aa9b709d20a
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
