@@ -5,9 +5,9 @@
 /**
 *_isdigit - checks for a digit (0 through 9)
 *
-*@str: digit initialization
+*@argv: argument vector
 *
-*Return: 1 is str[i] is a digit, 0 otherwise
+*Return: 1 is argv[i] is a digit, 0 otherwise
 */
 
 int _isdigit(char *argv)
