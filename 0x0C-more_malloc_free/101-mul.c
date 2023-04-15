@@ -16,7 +16,7 @@ int _isdigit(char *argv)
 
 	while (argv[i])
 	{
-		if (argv[i] < '0'|| argv[i] > '9')
+		if (argv[i] < '0' || argv[i] > '9')
 
 			return (0); /*For non-digit characters*/
 		i++;
