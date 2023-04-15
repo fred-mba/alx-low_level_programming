@@ -44,11 +44,10 @@ int mul(int num1, int num2)
  *Return: 0 ==> success
  */
 
-int _main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int *prod, res, i;
 
-	prod = malloc(sizeof(int));
 	if (argc != 3)
 	{
 		printf("Error\n");
@@ -63,10 +62,11 @@ int _main(int argc, char *argv[])
 			exit(98);
 		}
 	}
+	prod = malloc(sizeof(int));
 	res = mul(atoi(argv[1]), atoi(argv[2]));
 	printf("%d\n", res);
 
 	free(prod);
 
-	return (0);
+	return (res);
 }
