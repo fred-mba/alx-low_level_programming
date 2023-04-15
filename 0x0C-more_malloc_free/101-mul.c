@@ -48,7 +48,6 @@ int main(int argc, char *argv[])
 {
 	int *prod, res, i;
 
-	prod = malloc(sizeof(int));
 	if (argc != 3)
 	{
 		printf("Error\n");
@@ -64,6 +63,7 @@ int main(int argc, char *argv[])
 		}
 	}
 
+	prod = malloc(sizeof(int));
 	res = mul(atoi(argv[1]), atoi(argv[2]));
 	printf("%d\n", res);
 
