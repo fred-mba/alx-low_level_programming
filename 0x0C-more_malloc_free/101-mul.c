@@ -1,4 +1,5 @@
 #include "main.h"
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -33,6 +34,7 @@ int _isdigit(char *argv)
 
 long mul(long num1, long num2)
 {
+
 	return (num1 * num2);
 }
 
@@ -45,7 +47,7 @@ long mul(long num1, long num2)
 
 int main(int argc, char *argv[])
 {
-	int *prod, res, i;
+	int **prod, res, i;
 
 	if (argc != 3)
 	{
