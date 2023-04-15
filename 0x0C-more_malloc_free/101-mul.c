@@ -31,7 +31,7 @@ int _isdigit(char *argv)
  *Return: multiplication result
  */
 
-int mul(int num1, int num2)
+long mul(long num1, long num2)
 {
 	return (num1 * num2);
 }
