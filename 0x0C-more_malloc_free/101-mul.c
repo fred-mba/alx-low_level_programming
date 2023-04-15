@@ -16,13 +16,13 @@ int _isdigit(char *str)
 
 	while (str[i] != '\0')
 	{
-		if (str[i] < '0' || str[i] > '9')
+		if (str[i] < 48 || str[i] > 57)
 		{
-			return (0);
+			return (1);
 		}
 		i++;
 	}
-	return (1);
+	return (0);
 }
 
 /**
@@ -48,6 +48,7 @@ int main(int argc, char *argv[])
 {
 	int *prod, res, i;
 
+	prod = malloc(sizeof(int));
 	if (argc != 3)
 	{
 		printf("Error\n");
@@ -62,7 +63,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 	}
-	prod = malloc(sizeof(int));
+
 	res = mul(atoi(argv[1]), atoi(argv[2]));
 	printf("%d\n", res);
 
