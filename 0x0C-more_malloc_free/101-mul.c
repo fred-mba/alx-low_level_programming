@@ -16,13 +16,12 @@ int _isdigit(char *argv)
 
 	while (argv[i])
 	{
-		if (argv[i] > 48 || argv[i] < 57)
+		if (argv[i] < '0'|| argv[i] > '9')
 
-			return (1);
-		else
-			return (0);
+			return (0); /*For non-digit characters*/
+		i++;
 	}
-	return (0);
+	return (1); /*Return 1 if all characters are digits*/
 }
 
 /**
