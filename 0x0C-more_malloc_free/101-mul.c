@@ -10,19 +10,19 @@
 *Return: 1 is str[i] is a digit, 0 otherwise
 */
 
-int _isdigit(char *str)
+int _isdigit(char *argv)
 {
 	int i = 0;
 
-	while (str[i] != '\0')
+	while (argv[i])
 	{
-		if (str[i] < '0' || str[i] > '9')
-		{
+		if (argv[i] > 48 || argv[i] < 57)
+
+			return (1);
+		else
 			return (0);
-		}
-		i++;
 	}
-	return (1);
+	return (0);
 }
 
 /**
