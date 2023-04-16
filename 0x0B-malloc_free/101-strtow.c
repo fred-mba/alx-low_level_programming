@@ -17,9 +17,6 @@ char **strtow(char *str)
 	int i, j, k;
 	int len = strlen(str);
 
-	if (len == ' ')
-		return (NULL);
-
 	if (*str == '\0' || str == NULL)
 		return (NULL);
 
