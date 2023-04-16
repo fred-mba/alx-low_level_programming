@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
 
 /**
@@ -13,12 +14,23 @@
 char **strtow(char *str)
 {
 	char **words;
+	int i, j, k;
+	int len = strlen(str);
 
-	words = malloc(sizeof(char *) * (strlen(str) + 1));
-
-	if (words == NULL)
+	words = malloc(sizeof(char *) * len + 1);
+	for (i = 0; i < len; ++i)
 	{
-		return (NULL);
+		if (str[i] != ' ' && str[i] != '\0')
+		{
+			for (j = i; j < len && str[j] != ' '; j++)
+				;
+			for (k = i; k < j; k++)
+			{
+				printf("%c", str[k]);
+			}
+			printf("\n");
+			i = j;
+		}
 	}
 	return (words);
 }
