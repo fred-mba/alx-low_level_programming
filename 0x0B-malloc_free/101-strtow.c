@@ -17,7 +17,7 @@ char **strtow(char *str)
 	int i, j, k;
 	int len = strlen(str);
 
-	if (*str == '\0' || str == NULL)
+	if (*str == '\0' || str == NULL || *str == ' ')
 		return (NULL);
 
 	words = (char **)malloc(sizeof(char *) * (len + 1));
