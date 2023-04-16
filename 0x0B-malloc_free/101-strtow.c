@@ -17,10 +17,13 @@ char **strtow(char *str)
 	int i, j, k;
 	int len = strlen(str);
 
-	if (*str == '\0' || str == NULL || str == 0)
+	if (len == 0)
 		return (NULL);
 
-	words = malloc(sizeof(char) * (len + 1) + 33);
+	if (*str == '\0' || str == NULL)
+		return (NULL);
+
+	words = malloc(sizeof(char*) * (len + 1));
 	if (words == NULL)
 		return (NULL);
 
