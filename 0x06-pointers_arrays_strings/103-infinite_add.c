@@ -27,16 +27,13 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		digit2 = (j >= 0) ? (n2[j] - '0') : 0;
 		sum = digit1 + digit2 + carry;
 
-		if (k < size_r - 1)
-		{
-			r[k] = (sum % 10) + '0';
-			k++;
-			carry = sum / 10;
-		}
-		else
+		if (k >= size_r - 1)
 		{
 			return ("Error");
 		}
+		r[k] = (sum % 10) + '0';
+		k++;
+		carry = sum / 10;
 		i--;
 		j--;
 	}
