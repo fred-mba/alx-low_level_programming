@@ -3,22 +3,22 @@
 
 /**
  * print_char - print char type element passed to va_list
- * @c: argument passed to function
+ * @arg: argument passed to function
  */
-void print_char(va_list c)
+void print_char(va_list arg)
 {
-	printf("%c", va_arg(c, int));
+	printf("%c", va_arg(arg, int));
 }
 
 /**
  * print_str - print string from va_list
- * @s: string passed to function
+ * @arg: string passed to function
  */
-void print_str(va_list s)
+void print_str(va_list arg)
 {
 	char *p;
 
-	p = va_arg(s, char *);
+	p = va_arg(arg, char *);
 	if (p == NULL)
 		printf("(nil)");
 	printf("%s", p);
@@ -26,20 +26,20 @@ void print_str(va_list s)
 
 /**
  * print_float - print float type from va_list
- * @f: double passed to function
+ * @arg: double passed to function
  */
-void print_float(va_list f)
+void print_float(va_list arg)
 {
-	printf("%f", va_arg(f, double));
+	printf("%f", va_arg(arg, double));
 }
 
 /**
  * print_int - print int type element from va_list
- * @tin: integer passed to function
+ * @arg: integer passed to function
  */
-void print_int(va_list tin)
+void print_int(va_list arg)
 {
-	printf("%d", va_arg(tin, int));
+	printf("%d", va_arg(arg, int));
 }
 
 /**
@@ -54,10 +54,10 @@ void print_all(const char * const format, ...)
 	char *separator;
 
 	specifier list[] = {
-		{ "c", print_char },
-		{ "f", print_float },
-		{ "s", print_str },
-		{ "i", print_int }
+		{"c", print_char},
+		{"f", print_float},
+		{"s", print_str},
+		{"i", print_int}
 	};
 
 	i = 0;
