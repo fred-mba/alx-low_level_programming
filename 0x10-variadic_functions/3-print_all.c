@@ -38,7 +38,7 @@ void print_float(va_list f)
 
 /**
  * print_int - print int type element from va_list
- * @itn: integer passed to function
+ * @tin: integer passed to function
  */
 void print_int(va_list tin)
 {
