@@ -20,7 +20,7 @@ void print_str(va_list arg)
 
 	p = va_arg(arg, char *);
 	if (p == NULL)
-		printf("(nil)");
+		printf("(nil)\n");
 	printf("%s", p);
 }
 
