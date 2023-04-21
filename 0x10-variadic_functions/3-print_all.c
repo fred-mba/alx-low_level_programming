@@ -20,11 +20,8 @@ void print_str(va_list s)
 
 	p = va_arg(s, char *);
 	if (p == NULL)
-	{
 		printf("(nil)");
-	}
-	else
-		printf("%s", p);
+	printf("%s", p);
 }
 
 /**
