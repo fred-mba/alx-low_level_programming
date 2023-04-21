@@ -20,7 +20,7 @@ void print_str(va_list arg)
 
 	p = va_arg(arg, char *);
 	if (p == NULL)
-		printf("(nil)\n");
+		p = "(nil)";
 	printf("%s", p);
 }
 
@@ -63,7 +63,7 @@ void print_all(const char * const format, ...)
 	i = 0;
 	separator = "";
 	va_start(ap, format);
-	while (format != NULL && format[i] != '\0')
+	while (format && format[i])
 	{
 		j = 0;
 		while (j < 4)
@@ -79,6 +79,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 
-	va_end(ap);
-	printf("\n");
+	printf("\n"), va_end(ap);
 }
