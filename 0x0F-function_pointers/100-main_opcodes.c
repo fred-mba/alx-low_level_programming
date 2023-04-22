@@ -1,10 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define NB_BYTES 40
+
 /**
  *main - prints the opcodes of its own main function
  *@argc: argument count
  *@argv: argument vector
+ *ptr - is the pointer to the memory address
+ *index - the index for each byte
  *Return: 0 ==> success.
  */
 int main(int argc, char *argv[])
@@ -18,6 +22,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(1);
 	}
+	num_bytes = NB_BYTES;
 
 	num_bytes = atoi(argv[1]);
 
