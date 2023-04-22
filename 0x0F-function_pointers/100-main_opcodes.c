@@ -34,22 +34,11 @@ void print_opcodes(void *funct)
 
 /**
  *main - calls print_opcodes function with a pointer to itself
- *@argc: argument count passed
- *@argv: argument vector
  *Return: 0 ==> success.
  */
 
-int main(int argc, char *argv[])
+int main(void)
 {
-	while (--argc)
-	{
-		if (argc < 1)
-		{
-			printf("Error\n");
-			exit(1);
-		}
-		printf("%s\n", *argv++);
-		print_opcodes((void *)main);
-	}
+	print_opcodes((void *)main);
 	return (0);
 }
