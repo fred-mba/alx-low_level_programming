@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 	for (index = 0; index < num_bytes; index++)
 	{
 		print_opcode = *(unsigned char *)ptr;
-		printf("%02x ", print_opcode);
+		printf("%02x", print_opcode);
 
 		if (index < num_bytes - 1)
 			printf(" ");
