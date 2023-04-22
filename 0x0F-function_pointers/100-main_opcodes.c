@@ -1,44 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "function_pointers.h"
 
 /**
- *print_opcodes - takes a pointer to a function and prints
- *	the opcodes of its instruction.
- *@funct: pointer to memory contents
- *
+ *main - prints the opcodes of its own main function
+ *@argc: argument count
+ *@argv: argument vector
+ *Return: 0 ==> success.
  */
-
-void print_opcodes(void *funct)
+int main(int argc, char *argv[])
 {
-	unsigned char *pf;
-	int num_bytes = 0;
+	int index, num_bytes;
+	int (*ptr)(int, char **) = main;
+	unsigned char print_opcode;
 
-	pf = (unsigned char *)funct;
-
-	/*stops when encounter `ret` instruction for any architecture used*/
-	while (*pf != 0xC3 && *pf != 0xC2 && *pf != 0xC9 && *pf != 0xCA)
+	if (argc != 2)
 	{
-		printf("%02x ", *pf);
-		pf++;
+		printf("Error\n");
+		exit(1);
 	}
-	printf("%02x\n", *pf);
 
-	/*check if the number of bytes is negative*/
+	num_bytes = atoi(argv[1]);
+
+	/*check if number of bytes is negative*/
 	if (num_bytes < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-}
 
-/**
- *main - calls print_opcodes function with a pointer to itself
- *Return: 0 ==> success.
- */
+	for (index = 0; index < num_bytes; index++)
+	{
+		print_opcode = *(unsigned char *)ptr;
+		printf("%02x ", print_opcode);
 
-int main(void)
-{
-	print_opcodes((void *)main);
+		if (index == num_bytes - 1)
+			continue;
+
+		ptr++;
+	}
+
+	printf("\n");
+
 	return (0);
 }
