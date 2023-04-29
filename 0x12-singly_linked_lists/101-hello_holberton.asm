@@ -1,45 +1,16 @@
-	.file	"test.c"
-	.text
-	.section	.rodata
-.LC0:
-	.string	"Hello, Holberton"
-	.text
-	.globl	main
-	.type	main, @function
-main:
-.LFB6:
-	.cfi_startproc
-	endbr64
-	pushq	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp
-	.cfi_def_cfa_register 6
-	leaq	.LC0(%rip), %rdi
-	movl	$0, %eax
-	call	printf@PLT
-	movl	$0, %eax
-	popq	%rbp
-	.cfi_def_cfa 7, 8
-	ret
-	.cfi_endproc
-.LFE6:
-	.size	main, .-main
-	.ident	"GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0"
-	.section	.note.GNU-stack,"",@progbits
-	.section	.note.gnu.property,"a"
-	.align 8
-	.long	 1f - 0f
-	.long	 4f - 1f
-	.long	 5
-0:
-	.string	 "GNU"
-1:
-	.align 8
-	.long	 0xc0000002
-	.long	 3f - 2f
-2:
-	.long	 0x3
-3:
-	.align 8
-4:
+section .data
+    msg db 'Hello, Holberton', 0   ; Define a null-terminated string
+
+section .text
+    global _start             ; Entry point for the program
+
+_start:
+    mov eax, 4                ; System call for 'write'
+    mov ebx, 1                ; File descriptor for stdout
+    mov ecx, msg              ; Address of the string to print
+    mov edx, 13               ; Length of the string to print
+    int 0x80                  ; Call the kernel to perform the system call
+
+    mov eax, 1                ; System call for 'exit'
+    xor ebx, ebx              ; Return code (0 for success)
+    int 0x80                  ; Call the kernel to perform the system call
