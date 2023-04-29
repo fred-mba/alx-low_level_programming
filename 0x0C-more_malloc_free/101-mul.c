@@ -5,24 +5,23 @@
 /**
 *_isdigit - checks for a digit (0 through 9)
 *
-*@str: digit initialization
+*@argv: argument vector
 *
-*Return: 1 is str[i] is a digit, 0 otherwise
+*Return: 1 is argv[i] is a digit, 0 otherwise
 */
 
-int _isdigit(char *str)
+int _isdigit(char *argv)
 {
 	int i = 0;
 
-	while (str[i] != '\0')
+	while (argv[i])
 	{
-		if (str[i] < '0' || str[i] > '9')
-		{
-			return (0);
-		}
+		if (argv[i] < '0' || argv[i] > '9')
+
+			return (0); /*For non-digit characters*/
 		i++;
 	}
-	return (1);
+	return (1); /*Return 1 if all characters are digits*/
 }
 
 /**
@@ -32,7 +31,7 @@ int _isdigit(char *str)
  *Return: multiplication result
  */
 
-int mul(int num1, int num2)
+long mul(long num1, long num2)
 {
 	return (num1 * num2);
 }
@@ -48,7 +47,6 @@ int main(int argc, char *argv[])
 {
 	int *prod, res, i;
 
-	prod = malloc(sizeof(int));
 	if (argc != 3)
 	{
 		printf("Error\n");
@@ -63,10 +61,12 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 	}
+
+	prod = malloc(sizeof(int));
 	res = mul(atoi(argv[1]), atoi(argv[2]));
 	printf("%d\n", res);
 
 	free(prod);
 
-	return (0);
+	return (res);
 }
