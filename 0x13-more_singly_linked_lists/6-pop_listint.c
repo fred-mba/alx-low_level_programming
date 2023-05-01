@@ -16,8 +16,8 @@ int pop_listint(listint_t **head)
 	if (head == NULL)
 		return (0);
 
-	value = (*head)->n; /*save the value of the 1st node*/
 	ptr = *head; /*save the pointer*/
+	value = (*head)->n; /*save the value of the 1st node*/
 	*head = ptr->next;
 	free(ptr);
 
