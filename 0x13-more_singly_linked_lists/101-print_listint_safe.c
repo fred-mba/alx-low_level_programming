@@ -12,9 +12,6 @@ size_t print_listint_safe(const listint_t *head)
 	size_t count = 0;
 	const listint_t *current = head, *nxtNode;
 
-	if (current == NULL)
-		exit(98);
-
 	while (current != NULL)
 	{
 		printf("[%p] %d\n", (void *)current, current->n);
