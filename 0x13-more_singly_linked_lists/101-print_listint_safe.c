@@ -21,6 +21,7 @@ size_t print_listint_safe(const listint_t *head)
 		count++;
 
 		nxtNode = current->next;
+
 		if (nxtNode >= current)
 		{
 			printf("-> [%p] %d\n", (void *)nxtNode, nxtNode->n);
