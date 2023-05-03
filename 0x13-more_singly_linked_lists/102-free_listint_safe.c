@@ -9,18 +9,18 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *curr, *bin;
+	listint_t *current, *bin;
 	size_t i = 0;
 
-	curr = *h;
+	current = *h;
 	while (curr != NULL)
 	{
 		i++;
-		bin = curr;
-		curr = curr->next;
+		bin = current;
+		current = current->next;
 		free(bin);
 
-		if (bin < curr)
+		if (bin < current)
 			break;
 	}
 	*h = NULL;
