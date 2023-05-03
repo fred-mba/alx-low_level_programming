@@ -2,7 +2,7 @@
 
 _void free_listint(listint_t *head)_
 
-- This function iteratively frees up each node in the linked list by storing the head node in a temporary pointer variable `temp`, then moving on to the next node by updating the temp pointer, and finally freeing up the memory for the node pointed to by temp.
+- This function iteratively frees up each node in the linked list by storing the head node in a temporary pointer variable `temp`, then moving on to the next node by updating the `temp` pointer, and finally freeing up the memory for the node pointed to by `temp`.
 - This process is repeated until head address is NULL, which indicates the end of the linked list.
 
 _void free_listint2(listint_t **head)_
@@ -12,11 +12,11 @@ _void free_listint2(listint_t **head)_
 
 _int pop_listint(listint_t **head)_
 
-- This implementation checks if the *head is empty and returns a default value(0); Else, it saves the `value` of the 1st node and the pointer to the first node.
+- This implementation checks if the `*head` is empty and returns a default value(0); Else, it saves the `value` of the 1st node and the pointer to the first node.
 - It updates the header to point the second node (if any).
 - At the end it frees the node, and returns the saved value.
 
-_listint_t * get_nodeint_at_index(listint_t *head, unsigned int index)_
+_listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)_
 
 - This function works by iterating through the linked list until it reaches the `node` at the given `index`, or until it reaches the end of the list (NULL) if the index is out of range.
 - If the index is out of range, the function returns NULL.
@@ -32,4 +32,4 @@ _int sum_listint(listint_t *head)_
 
 _int delete_nodeint_at_index(listint_t **head, unsigned int index)_
 
-- The implementation checks for error conditions and returns -1 if the deletion was unsuccessful. It also initializes temp and del pointers and correctly handles the case when the node to be deleted is not the head node.
+- The implementation checks for error conditions and returns -1 if the deletion was unsuccessful. It also initializes `temp` and `del` pointers and correctly handles the case when the node to be deleted is not the head node.
