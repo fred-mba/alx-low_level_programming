@@ -10,23 +10,25 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t count = 0;
-	const listint_t *current = head, *nxtNode;
 
-	while (current != NULL)
+	if (head == NULL)
+		return (0);
+
+	while (head != NULL)
 	{
-		printf("[%p] %d\n", (void *)current, current->n);
+		printf("[%p] %d\n", (void *)head, head->n);
 		count++;
 
-		nxtNode = current->next;
-
-		if (nxtNode >= current)
+		if (head > head->next)
 		{
-			printf("-> [%p] %d\n", (void *)nxtNode, nxtNode->n);
+			head = head->next;
+		}
+		else
+		{
+			head = head->next;
+			printf("-> [%p] %d\n", (void *)head, head->n);
 			break;
 		}
-
-		current = nxtNode;
 	}
-
 	return (count);
 }
