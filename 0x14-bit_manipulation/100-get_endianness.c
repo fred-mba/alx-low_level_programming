@@ -9,10 +9,10 @@
  */
 int get_endianness(void)
 {
-	unsigned int val = 1;
+	int val = 1;
 
 	if (*(char *)&val == 1) /*little endian*/
-		return (0);
+		return (1);
 	else
-		return (1); /*big-endian*/
+		return (0); /*big-endian*/
 }
