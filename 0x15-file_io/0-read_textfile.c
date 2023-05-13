@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  *read_textfile - reads a text file and prints it to the POSIX standard output
  *@filename: pointer to the file
@@ -13,30 +12,28 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int txt_file, total, rcount;
-	char buffer[BUFSIZE];
+	FILE *file;
+	char *buffer = NULL;
+	ssize_t total_read = 0;
 
-	if (filename == NULL)
+	file = fopen(filename, "r");
+	if (file == NULL)
+		return (0);
+
+	buffer = malloc(letters + 1);
+	if (buffer == NULL)
+		return (0);
+
+	total_read = fread(buffer, 1, letters, file);
+	if (total_read < 0)
 	{
 		return (0);
 	}
-	txt_file = open(filename, O_RDONLY);
-	if (txt_file == -1)
-	{
-		return (0);
-	}
-	total = 0;
-	rcount = 1;
-	while (letters > BUFSIZE && rcount != 0)
-	{
-		rcount = read(txt_file, buffer, BUFSIZE);
-		write(STDOUT_FILENO, buffer, rcount);
-		total += rcount;
-		letters -= BUFSIZE;
-	}
-	rcount = read(txt_file, buffer, letters);
-	write(STDOUT_FILENO, buffer, rcount);
-	total += rcount;
-	close(txt_file);
-	return (total);
+	buffer[total_read] = '\0';
+	printf("%s", buffer);
+
+	fclose(file);
+	free(buffer);
+
+	return (total_read);
 }
