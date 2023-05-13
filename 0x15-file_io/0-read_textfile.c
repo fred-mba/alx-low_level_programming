@@ -20,13 +20,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (file == NULL)
 		return (0);
 
-	buffer = malloc(letters + 1);
+	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
 		return (0);
 
 	total_read = fread(buffer, 1, letters, file);
 	if (total_read < 0)
 	{
+		free(buffer);
 		return (0);
 	}
 	buffer[total_read] = '\0';
