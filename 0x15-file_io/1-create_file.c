@@ -33,7 +33,9 @@ int create_file(const char *filename, char *text_content)
 	}
 
 	fclose(new_file);
-	chmod(filename, S_IRUSR | S_IWUSR);
+
+	if (access(filename, F_OK) == 0)
+		chmod(filename, S_IRUSR | S_IWUSR);
 
 	return (1); /*created successfully*/
 }
