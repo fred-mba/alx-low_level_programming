@@ -12,7 +12,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int new_file,bytes_written, i;
+	int new_file, bytes_written, i;
 
 	if (filename == NULL)
 		return (-1);
@@ -26,7 +26,7 @@ int create_file(const char *filename, char *text_content)
 		if (bytes_written == -1)
 			return (-1);
 	}
-	close (new_file);
+	close(new_file);
 
 	return (1); /*created successfully*/
 }
