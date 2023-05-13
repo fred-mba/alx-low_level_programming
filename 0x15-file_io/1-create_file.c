@@ -12,30 +12,21 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	FILE *new_file;
-	size_t text_len = strlen(text_content);
-	size_t bytes_written;
+	int new_file,bytes_written, i;
 
-	new_file = fopen(filename, "w");
-	if (new_file == NULL)
-	{
-		return (-1); /*if file fails to open*/
-	}
+	if (filename == NULL)
+		return (-1);
 
-	if (text_len > 0)
+	new_file = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
+	if (text_content)
 	{
-		bytes_written = fwrite(text_content, sizeof(char), text_len, new_file);
-		if (bytes_written < text_len)
-		{
-			fclose(new_file); /*write fails*/
+		for (i = 0; text_content[i] != '\0'; i++)
+			;
+		bytes_written = write(new_file, text_content, i);
+		if (bytes_written == -1)
 			return (-1);
-		}
 	}
-
-	fclose(new_file);
-
-	if (access(filename, F_OK) == 0)
-		chmod(filename, S_IRUSR | S_IWUSR);
+	close (new_file);
 
 	return (1); /*created successfully*/
 }
