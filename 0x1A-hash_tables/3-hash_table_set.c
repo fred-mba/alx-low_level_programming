@@ -12,25 +12,21 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	int idx;
 
 	if (ht == NULL || key == NULL || value == NULL)
-	{
 		return (0);
-	}
 
 	idx = key_index((const unsigned char *)key, ht->size);
-
 	current_element = ht->array[idx];
-	while (current_element != NULL)
-	{
-		if (strcmp(current_element->key, key) == 0)
-		{
-			free(current_element->value); /*key found, update*/
-			current_element->value = strdup(value);
 
-			if (current_element->value == NULL)
+	if (current_element != NULL)
+	{
+		while(current_element)
+		{
+			if (strcmp(current_element->key, key) == 0)
 			{
-				return (0);
+				current_element->value = strdup(value);
+				return (1); /*update success*/
 			}
-			return (1); /*update success*/
+			current_element = current_element->next;
 		}
 	}
 	/*if key doesn't exist, create new node*/
