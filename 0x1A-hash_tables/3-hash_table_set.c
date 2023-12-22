@@ -19,7 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (current_element != NULL)
 	{
-		while(current_element)
+		while (current_element)
 		{
 			if (strcmp(current_element->key, key) == 0)
 			{
