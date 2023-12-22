@@ -7,12 +7,5 @@
  */
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
-	unsigned long int hash = 0;
-	int c;
-
-	while ((c = *key++))
-	{
-		hash = (hash * 33) ^ c;
-	}
-	return (hash % size);
+	return (hash_djb2(key) % size);
 }
