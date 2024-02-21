@@ -9,8 +9,9 @@ OBJ = $(SRC:.c=.o)
 # name of the excutable
 NAME = school
 
+# builds excecutable file `school` 
 all: $(NAME)
 
 # linking step
 $(NAME): $(OBJ)
-	$(CC) $^ -o $@
+	$(CC) $(SRC) -o $(NAME)
