@@ -1,0 +1,6 @@
+CC=gcc
+
+all: main.o school.o
+
+school: main.c school.c
+	$(CC) school main.o school.o
