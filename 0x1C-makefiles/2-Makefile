@@ -1,7 +1,7 @@
 CC = gcc
 
 # source files
-SRC = $(wildcard *.c)
+SRC = main.c school.c
 
 # object files
 OBJ = $(SRC:.c=.o)
