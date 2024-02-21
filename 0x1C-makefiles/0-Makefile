@@ -1,6 +1,2 @@
-CC=gcc
-
-all: main.o school.o
-
-school: main.c school.c
-	$(CC) school main.o school.o
+all:
+	gcc main.c school.c -o school
