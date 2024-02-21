@@ -20,5 +20,4 @@ oclean:
 fclean: clean oclean
 
 # forces recompilation of all source files
-re: fclean $(SRC)
-	$(MAKE) all
+re: fclean all
