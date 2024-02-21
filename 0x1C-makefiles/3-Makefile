@@ -4,9 +4,7 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -rf
 
-all = $(NAME)
-
-$(NAME): $(OBJ)
+all: $(OBJ)
 	$(CC) $(SRC) -o $(NAME)
 
 #  deletes all Emacs and Vim temporary files
