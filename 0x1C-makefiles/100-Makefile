@@ -1,3 +1,5 @@
+# Basic Make file, but with flags
+
 CC=gcc
 SRC=holberton.c main.c
 OBJ=$(SRC:.c=.o)
