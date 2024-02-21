@@ -1,0 +1,20 @@
+CC = gcc
+
+# source files
+SRC = $(wildcard *.c)
+
+# object files
+OBJ = $(SRC:.c=.o)
+
+# name of the excutable
+NAME = school
+
+all: $(NAME)
+
+# linking step
+$(NAME): $(OBJ)
+	$(CC) $^ -o $@
+
+#remove all object files
+clean:
+	rm -f $(OBJ) $(NAME)
