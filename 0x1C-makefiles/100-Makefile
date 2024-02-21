@@ -1,0 +1,28 @@
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+RM = rm -rf
+
+.PHONY: clean oclean fclean re all $(NAME)
+all: $(SRC) $(OBJ)
+
+# Inclde header file  in all and re rules
+$(NAME): m.h $(OBJ)
+	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
+
+#  deletes all Emacs and Vim temporary and executable files
+clean:
+	$(RM) *~ $(NAME)
+
+# deletes the object files
+oclean:
+	$(RM) $(OBJ)
+
+# deletes all Emacs and Vim temporary files,
+#+ the executable, and the object files
+fclean: clean oclean
+
+# forces recompilation of all source files
+re: fclean all
