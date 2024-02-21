@@ -6,11 +6,12 @@ NAME = school
 RM = rm -rf
 
 .PHONY: clean oclean fclean re all $(NAME)
-all: $(SRC) $(OBJ)
+
+all: $(NAME)
 
 # Inclde header file  in all and re rules
 $(NAME): m.h $(OBJ)
-	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 #  deletes all Emacs and Vim temporary and executable files
 clean:
