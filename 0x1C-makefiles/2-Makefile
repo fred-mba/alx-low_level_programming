@@ -14,7 +14,3 @@ all: $(NAME)
 # linking step
 $(NAME): $(OBJ)
 	$(CC) $^ -o $@
-
-#remove all object files
-clean:
-	rm -f $(OBJ) $(NAME)
